@@ -1,12 +1,11 @@
 <?
-require_once 'GoogleAuthenticator.php';
-$ga = new GoogleAuthenticator();
-$secret = $ga->createSecret();
-
 
 if ($_GET['enter']) {
     // exit('ok');
-    
+    require_once 'GoogleAuthenticator.php';
+
+    $ga = new GoogleAuthenticator();
+    $secret = $ga->createSecret();
     echo "<p>Secret is: . $secret . </p>";
 
     $qrCodeUrl = $ga->getQRCodeGoogleUrl('test123', $secret);
@@ -14,11 +13,11 @@ if ($_GET['enter']) {
 }
 
 if ($_GET['confirm']) {
-    // require_once 'GoogleAuthenticator.php';
-    // $ga = new GoogleAuthenticator();
-    // $ga1 = new GoogleAuthenticator();
-    // $secret = $ga->createSecret();
-    $checkResult = $ga->verifyCode($secret, $_GET['code'], 1);
+    require_once 'GoogleAuthenticator.php';
+    $ga = new GoogleAuthenticator();
+    $ga1 = new GoogleAuthenticator();
+    $secret = $ga->createSecret();
+    $checkResult = $ga1->verifyCode($secret, $_GET['code'], 2);
     if ($checkResult) {
         exit('OK');
     } else {

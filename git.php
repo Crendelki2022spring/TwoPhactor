@@ -2,7 +2,7 @@
 
 $params = array(
 	'client_id'     => 'e8ebae2565eb786ceb93',
-	'redirect_uri'  => 'http://hellohahat.beget.tech',
+	'redirect_uri'  => 'http://hellohahat.beget.tech/allnice.html',
 	'scope'         => 'user',
 	'response_type' => 'code',
 	'state'         => ''
@@ -14,9 +14,9 @@ echo '<a href="' . $url . '">Войти через GitHub</a>';
 
 if (!empty($_GET['code'])) {
 	$params = array(
-		'client_id'     => 'Client_ID',
+		'client_id'     => 'e8ebae2565eb786ceb93',
 		'client_secret' => 'Client_secrets',
-		'redirect_uri'  => 'http://hellohahat.beget.tech/allnice/oauth-githud.php',
+		'redirect_uri'  => 'http://hellohahat.beget.tech/allnice.html',
 		'code'          => $_GET['code']
 	);	
 			
