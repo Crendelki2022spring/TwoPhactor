@@ -1,8 +1,8 @@
 <?php
 
 $params = array(
-	'client_id'     => 'f09fcae5ac1048d49bd0',
-	'redirect_uri'  => 'http://hellohahat.beget.tech/allnice.html',
+	'client_id'     => 'e8ebae2565eb786ceb93',
+	'redirect_uri'  => 'http://hellohahat.beget.tech',
 	'scope'         => 'user',
 	'response_type' => 'code',
 	'state'         => ''
@@ -16,7 +16,7 @@ if (!empty($_GET['code'])) {
 	$params = array(
 		'client_id'     => 'Client_ID',
 		'client_secret' => 'Client_secrets',
-		'redirect_uri'  => 'https://ваш_домен/oauth-githud.php',
+		'redirect_uri'  => 'http://hellohahat.beget.tech/allnice/oauth-githud.php',
 		'code'          => $_GET['code']
 	);	
 			
