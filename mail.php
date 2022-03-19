@@ -26,18 +26,24 @@ $mail->addAddress($email);     // Кому будет уходить письм�
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-// function shapeSpace_random_string($length) {
+function shapeSpace_random_string($length) {
 	
-// 	$characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	$characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	
-// 	$random = substr(str_shuffle($characters), 0, $length);
-// 	return $random;
+	$random = substr(str_shuffle($characters), 0, $length);
+	return $random;
 	
-// }
-// $code = shapeSpace_random_string(6);
+}
+
+$code = shapeSpace_random_string(6);
+
+function get_Code() {
+    global $code;
+    return $code;
+}
 
 $mail->Subject = 'Подтвердите вход';
-$mail->Body    = 'Ваш проверочный код: 123123';
+$mail->Body    = 'Ваш проверочный код: ' . get_Code();
 $mail->AltBody = '';
 
 if(!$mail->send()) {
