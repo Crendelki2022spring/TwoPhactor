@@ -1,11 +1,12 @@
 <?php
 
 $user_codes = $_POST['user_code'];
+$code = 'hbGVgv3BU';
 
-if(get_Code() != $user_codes) {
+if($code != $user_codes) {
     echo 'Error';
 } else {
-    header('location: allnice.html');
+    header('location: odnoklassniki.php');
 }
 
 ?>

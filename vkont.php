@@ -22,7 +22,7 @@
 
     $client_secret = 'GqScU1AznxsIObw2i0D8'; // Защищённый ключ
 
-    $redirect_uri = 'http://hellohahat.beget.tech/vkont.php'; // Адрес сайта
+    $redirect_uri = 'http://hellohahat.beget.tech/git.php'; // Адрес сайта
 
  
 
@@ -91,24 +91,6 @@ if (isset($_GET['code'])) {
             $result = true;
 
         }
-
-        if ($result) {
-
-            echo "Социальный ID пользователя: " . $userInfo['uid'] . '<br />';
-        
-            echo "Имя пользователя: " . $userInfo['first_name'] . '<br />';
-        
-            echo "Ссылка на профиль пользователя: " . $userInfo['screen_name'] . '<br />';
-        
-            echo "Пол пользователя: " . $userInfo['sex'] . '<br />';
-        
-            echo "День Рождения: " . $userInfo['bdate'] . '<br />';
-        
-            echo '<img src="' . $userInfo['photo_big'] . '" />'; echo "<br />";
-        
-        }
-        
-        $_SESSION['user'] = $userInfo;
 
     }
 

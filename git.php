@@ -1,8 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+
+    <title>Аутентификация через Yandex</title>
+
+</head>
+
+<body>
+
 <?php
 
 $params = array(
 	'client_id'     => 'e8ebae2565eb786ceb93',
-	'redirect_uri'  => 'http://hellohahat.beget.tech/allnice.html',
+	'redirect_uri'  => 'http://hellohahat.beget.tech/odnok.php
+	',
 	'scope'         => 'user',
 	'response_type' => 'code',
 	'state'         => ''
@@ -16,7 +33,7 @@ if (!empty($_GET['code'])) {
 	$params = array(
 		'client_id'     => 'e8ebae2565eb786ceb93',
 		'client_secret' => 'Client_secrets',
-		'redirect_uri'  => 'http://hellohahat.beget.tech/allnice.html',
+		'redirect_uri'  => 'http://hellohahat.beget.tech/odnok.php',
 		'code'          => $_GET['code']
 	);	
 			
@@ -46,3 +63,8 @@ if (!empty($_GET['code'])) {
 		}
 	} 
 }
+
+?>
+
+</body>
+</html>

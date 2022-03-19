@@ -114,24 +114,9 @@ if (isset($_GET['code'])) {
 
     }
 
-    if ($result) {
-        
-            echo "Социальный ID пользователя: " . $userInfo['id'] . '<br />';
-        
-            echo "Имя пользователя: " . $userInfo['real_name'] . '<br />';
-        
-            echo "Email: " . $userInfo['default_email'] . '<br />';
-        
-            echo "Пол пользователя: " . $userInfo['sex'] . '<br />';
-        
-            echo "День Рождения: " . $userInfo['birthday'] . '<br />';
-        
-        }
-        
     
 }
 
-$_SESSION['user'] = $userInfo;
 
  
 

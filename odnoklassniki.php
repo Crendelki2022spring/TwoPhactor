@@ -24,7 +24,7 @@ $public_key = 'CKDLPIKGDIHBABABA'; // Публичный ключ приложе
 
 $client_secret = '7961767D48A4EFBBFB12C445'; // Секретный ключ приложения
 
-$redirect_uri = 'http://hellohahat.beget.tech/allnice.html'; // Ссылка на приложение
+$redirect_uri = 'http://hellohahat.beget.tech/vkont.php'; // Ссылка на приложение
 
  
 
