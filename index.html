@@ -3,20 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="/favicon.ico">
 
-  <title>Вход</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- <meta name="description" content="">
+  <meta name="author" content=""> -->
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+  <!-- 
+  <title>Вход</title> -->
+
 
   <!-- Bootstrap core CSS -->
   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
 
   <!-- Custom styles for this template -->
-  <link href="style.css" rel="stylesheet">
 
   <!-- <style>
     	form {
@@ -28,24 +30,31 @@
 </head>
 
 <body>
+  <header>
+    <img src="files/LetterA.png" class="A_picture" width="50" height="50">
+  </header>
   <div class="container">
 
+    <legend>Войдите в свою учетную запись</legend>
+    <div class="GreyText">
+      <p>Защитите свои данные вместе с Authentication-service.ru!</p>
+    </div>
     <div class="row">
       <div class="col-sm-4">
         <form action="mail.php" method="POST">
-          <legend>Вход</legend>
 
           <div class="form-group">
             <label for="">Логин</label>
             <input type="text" class="form-control" id="" name="user_email" placeholder="mail@mail.ru">
           </div>
-
           <div class="form-group">
             <label for="">Пароль</label>
-            <input type="text" class="form-control" id="" name="user_password" placeholder="пароль">
+            <input type="text" class="form-control" id="" name="user_password" placeholder="Пароль">
+          </div>
+          <div class="btn_btn-primary" width="440" height="69">
+            <button type="submit" class="btn" width="440" height="400"> Войти </button>
           </div>
 
-          <button type="submit" class="btn btn-primary">Войти</button>
         </form>
         <div>
 
@@ -59,10 +68,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js">
+      </script> -->
+
 </body>
 
 </html>
