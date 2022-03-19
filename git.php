@@ -2,7 +2,7 @@
 
 $params = array(
 	'client_id'     => 'f09fcae5ac1048d49bd0',
-	'redirect_uri'  => 'http://hellohahat.beget.tech/oauth-githud.php',
+	'redirect_uri'  => 'http://hellohahat.beget.tech/allnice.html',
 	'scope'         => 'user',
 	'response_type' => 'code',
 	'state'         => ''
