@@ -4,8 +4,8 @@
 html {
     width: auto;
     height: auto;
-    background-image: url(files/MainImage.png);
-    background-position: left;
+    background-image: url(files/Error.png);
+    /* background-position: left; */
     background-size:cover;
     /* -webkit-background-size: cover; */
     -moz-background-size: cover;
@@ -174,9 +174,4 @@ label{
     font-size: 35px;
     text-decoration: none;
     
-}
-
-.errorText
-{
-    color:white;
 }

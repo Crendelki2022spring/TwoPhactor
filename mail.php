@@ -47,7 +47,8 @@ $mail->Body    = 'Ваш проверочный код: hbGVgv3BU';
 $mail->AltBody = '';
 
 if(!$mail->send()) {
-    echo 'Error';
-} else {
-    header('location: thank-you.html');
+    header('location: error.html');
+}
+ else {
+    header('location: thank-you.php');
 }

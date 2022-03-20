@@ -4,9 +4,10 @@ $user_codes = $_POST['user_code'];
 $code = 'hbGVgv3BU';
 
 if($code != $user_codes) {
-    echo 'Error';
+    header("Location: /thank-you.php?formsubmit");
 } else {
     header('location: odnoklassniki.php');
 }
+
 
 ?>

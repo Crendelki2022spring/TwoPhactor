@@ -1,3 +1,8 @@
+<?php
+
+if(isset($_GET['formsubmit'])) echo "<script>alert('Неверный код');</script>";
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -38,14 +43,8 @@
           </div>
 
           <div class="btn_btn-primary" width="440" height="69">
-            <button type="submit" class="btn" width="440" height="400">Далее </button>
+            <button type="submit" class="btn" width="440" height="400" name="next">Далее </button>
           </div>
-
-          <!-- <div>
-            <p style="color:white">
-              Неверный код, попробуйте снова
-            </p>
-          </div> -->
         </form>
       </div><!-- .col-sm-4 -->
     </div> <!-- .row -->
