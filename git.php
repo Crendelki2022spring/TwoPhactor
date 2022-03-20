@@ -18,7 +18,7 @@
 
 	$params = array(
 		'client_id'     => 'e8ebae2565eb786ceb93',
-		'redirect_uri'  => 'http://hellohahat.beget.tech/odnok.php
+		'redirect_uri'  => 'http://hakacren.beget.tech/odnok.php
 	',
 		'scope'         => 'user',
 		'response_type' => 'code',
@@ -39,7 +39,7 @@
 		$params = array(
 			'client_id'     => 'e8ebae2565eb786ceb93',
 			'client_secret' => 'Client_secrets',
-			'redirect_uri'  => 'http://hellohahat.beget.tech/odnok.php',
+			'redirect_uri'  => 'http://hakacren.beget.tech/odnok.php',
 			'code'          => $_GET['code']
 		);
 

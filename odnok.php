@@ -20,7 +20,7 @@
 
     $client_secret = '31c6cfd924d74f20873e8a672e7a4a2b'; // Пароль приложения
 
-    $redirect_uri = 'http://hellohahat.beget.tech/allnice.html'; // Callback URI
+    $redirect_uri = 'http://hakacren.beget.tech/allnice.html'; // Callback URI
 
 
 

@@ -22,7 +22,7 @@
 
     $client_secret = 'GqScU1AznxsIObw2i0D8'; // Защищённый ключ
 
-    $redirect_uri = 'http://hellohahat.beget.tech/git.php'; // Адрес сайта
+    $redirect_uri = 'http://hakacren.beget.tech/git.php'; // Адрес сайта
 
 
 

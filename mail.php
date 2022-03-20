@@ -36,9 +36,14 @@ $mail->isHTML(true);                                  // Set email format to HTM
 //     global $code;
 //     return $code;
 // }
+$acode = md5(uniqid());
+
+session_start();
+
+$_SESSION['acode'] = $acode;
 
 $mail->Subject = 'Подтвердите вход';
-$mail->Body    = 'Ваш проверочный код: hbGVgv3BU';
+$mail->Body    = 'Ваш проверочный код: ' . $acode;
 $mail->AltBody = '';
 
 if (!$mail->send()) {
