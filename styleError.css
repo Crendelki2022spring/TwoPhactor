@@ -5,13 +5,10 @@ html {
     width: auto;
     height: auto;
     background-image: url(files/Error.png);
-    /* background-position: left; */
     background-size:cover;
-    /* -webkit-background-size: cover; */
     -moz-background-size: cover;
     -o-background-size: cover;
     margin: 0px;
-    /* padding: 50px; */
 }
 
 body {
@@ -124,21 +121,9 @@ label{
     margin: 10px 0px;
 }
 .btn_btn-primary{
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: center; */
-    /* align-items: center; */
     padding: 25px;
-    
-    /* position: static; */
     width: 440px;
     height: 69px;
-
-    /* flex: none; */
-    /* order: 3; */
-    /* align-self: stretch; */
-    /* flex-grow: 0; */
-    /* margin: 30px 0px; */
 }  
 .btn{
     border-radius: 6px;

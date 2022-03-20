@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_GET['formsubmit'])) echo "<script>alert('Неверный код');</script>";
+if (isset($_GET['formsubmit'])) echo "<script>alert('Неверный код');</script>";
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +17,6 @@ if(isset($_GET['formsubmit'])) echo "<script>alert('Неверный код');</
   <link rel="icon" href="/favicon.ico">
 
   <title>Подтверждение</title>
-
-  <!-- Bootstrap core CSS -->
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -46,18 +43,10 @@ if(isset($_GET['formsubmit'])) echo "<script>alert('Неверный код');</
             <button type="submit" class="btn" width="440" height="400" name="next">Далее </button>
           </div>
         </form>
-      </div><!-- .col-sm-4 -->
-    </div> <!-- .row -->
+      </div>
+    </div>
 
-  </div><!-- /.container -->
-
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <!-- <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  </div>
 </body>
 
 </html>
