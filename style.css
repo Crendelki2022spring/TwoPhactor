@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 html {
     width: auto;
     height: auto;
@@ -23,7 +26,7 @@ legend{
     padding-left: 75px;
     padding-top: 20px;
 
-    font-family: 'Inter';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -62,7 +65,7 @@ label{
     padding-left: 15px;
     top: 0px;
 
-    font-family: 'Inter';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -89,13 +92,13 @@ label{
     padding-left: 75px;
     padding-top: 0px;
 
-    font-family: 'Inter';
+    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 18px;
     line-height: 28px;
 
-    color: #4B5563;
+    color: #000000;
 }
 
 .form-control{
@@ -139,11 +142,30 @@ label{
 }  
 .btn{
     border-radius: 6px;
-    font-family: 'Inter';
+    font-family: 'Roboto';
     font-size: 25px;
     width: 440px;
     height: 69px;
     text-align: center;
     background-color: #4F46E5;
     color: rgb(255, 255, 255)
+}
+
+.image{
+    padding-left: 300px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+
+}
+.space{
+    margin-top: 0px;
+    width: 440px;
+    height: 25px;
+    padding-top: 0px;
+    padding-bottom: 250px;
+    padding-left: 150px;
+    font-family: 'Roboto';
+    font-size: 35px;
+    text-decoration: none;
+    
 }

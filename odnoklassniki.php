@@ -1,136 +1,141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
 
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link href="style.css" rel="stylesheet" />
     <title></title>
 
 </head>
 
 <body>
+    <header>
+        <img src="files/LetterA.png" class="A_picture" width="50" height="50">
+    </header>
 
-<?php
+    <?php
 
- 
 
-$client_id = '512001309241'; // Application ID
 
-$public_key = 'CKDLPIKGDIHBABABA'; // Публичный ключ приложения
+    $client_id = '512001309241'; // Application ID
 
-$client_secret = '7961767D48A4EFBBFB12C445'; // Секретный ключ приложения
+    $public_key = 'CKDLPIKGDIHBABABA'; // Публичный ключ приложения
 
-$redirect_uri = 'http://hellohahat.beget.tech/vkont.php'; // Ссылка на приложение
+    $client_secret = '7961767D48A4EFBBFB12C445'; // Секретный ключ приложения
 
- 
+    $redirect_uri = 'http://hellohahat.beget.tech/vkont.php'; // Ссылка на приложение
 
-$url = 'http://www.odnoklassniki.ru/oauth/authorize';
 
- 
 
-$params = array(
+    $url = 'http://www.odnoklassniki.ru/oauth/authorize';
 
-    'client_id'     => $client_id,
 
-    'response_type' => 'code',
-
-    'redirect_uri'  => $redirect_uri
-
-);
-
- 
-
-echo $link = '<p><a href="' . $url . '?' . urldecode(http_build_query($params)) . '">Аутентификация через Одноклассники</a></p>';
-
- 
-
-if (isset($_GET['code'])) {
-
-    $result = false;
-
- 
 
     $params = array(
 
-        'code' => $_GET['code'],
+        'client_id'     => $client_id,
 
-        'redirect_uri' => $redirect_uri,
+        'response_type' => 'code',
 
-        'grant_type' => 'authorization_code',
-
-        'client_id' => $client_id,
-
-        'client_secret' => $client_secret
+        'redirect_uri'  => $redirect_uri
 
     );
 
- 
 
-    $url = 'http://api.odnoklassniki.ru/oauth/token.do';
 
- 
+    echo $link = '<legend> Подтвердите свою личность </legend> 
+        <p class="GreyText">Войдите в вашу учетную запись в Одноклассниках</p>
+        <div class="image">    
+        <img src="files/Odnoklas.jpg" width="100" height="100"> </div> </br>
+        <p class="space">
+            <a href="' . $url . '?' . urldecode(http_build_query($params)) . '">Аутентификация через Одноклассники</a> 
+        </p>
+        ';
 
-    $curl = curl_init();
 
-    curl_setopt($curl, CURLOPT_URL, $url);
 
-    curl_setopt($curl, CURLOPT_POST, 1);
+    if (isset($_GET['code'])) {
 
-    curl_setopt($curl, CURLOPT_POSTFIELDS, urldecode(http_build_query($params)));
+        $result = false;
 
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-    $result = curl_exec($curl);
-
-    curl_close($curl);
-
- 
-
-    $tokenInfo = json_decode($result, true);
-
- 
-
-    if (isset($tokenInfo['access_token']) && isset($public_key)) {
-
-        $sign = md5("application_key={$public_key}format=jsonmethod=users.getCurrentUser" . md5("{$tokenInfo['access_token']}{$client_secret}"));
-
- 
 
         $params = array(
 
-            'method'          => 'users.getCurrentUser',
+            'code' => $_GET['code'],
 
-            'access_token'    => $tokenInfo['access_token'],
+            'redirect_uri' => $redirect_uri,
 
-            'application_key' => $public_key,
+            'grant_type' => 'authorization_code',
 
-            'format'          => 'json',
+            'client_id' => $client_id,
 
-            'sig'             => $sign
+            'client_secret' => $client_secret
 
         );
 
- 
 
-        $userInfo = json_decode(file_get_contents('http://api.odnoklassniki.ru/fb.do' . '?' . urldecode(http_build_query($params))), true);
 
-        if (isset($userInfo['uid'])) {
+        $url = 'http://api.odnoklassniki.ru/oauth/token.do';
 
-            $result = true;
 
+
+        $curl = curl_init();
+
+        curl_setopt($curl, CURLOPT_URL, $url);
+
+        curl_setopt($curl, CURLOPT_POST, 1);
+
+        curl_setopt($curl, CURLOPT_POSTFIELDS, urldecode(http_build_query($params)));
+
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+        $result = curl_exec($curl);
+
+        curl_close($curl);
+
+
+
+        $tokenInfo = json_decode($result, true);
+
+
+
+        if (isset($tokenInfo['access_token']) && isset($public_key)) {
+
+            $sign = md5("application_key={$public_key}format=jsonmethod=users.getCurrentUser" . md5("{$tokenInfo['access_token']}{$client_secret}"));
+
+
+
+            $params = array(
+
+                'method'          => 'users.getCurrentUser',
+
+                'access_token'    => $tokenInfo['access_token'],
+
+                'application_key' => $public_key,
+
+                'format'          => 'json',
+
+                'sig'             => $sign
+
+            );
+
+
+
+            $userInfo = json_decode(file_get_contents('http://api.odnoklassniki.ru/fb.do' . '?' . urldecode(http_build_query($params))), true);
+
+            if (isset($userInfo['uid'])) {
+
+                $result = true;
+            }
         }
-
     }
 
-}
-
-?>
+    ?>
 
 </body>
 
